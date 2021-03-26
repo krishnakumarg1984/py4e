@@ -2,8 +2,8 @@
 
 text = "X-DSPAM-Confidence:    0.8475"
 
-num_start_idx = text.find("0")
-num = text[num_start_idx:]
+num_start_idx = text.find(":")
+num = text[num_start_idx + 1 :]
 try:
     float_num = float(num)
     print(float_num)
