@@ -42,4 +42,11 @@ for line in fh:
         quit()
 
 # print("Done")
-print("Average spam confidence:", spam_confidence_total / count_spam_confidence_lines)
+if count_spam_confidence_lines == 0:
+    print(
+        "The files does not contain any lines matching the desired pattern (SPAM count)"
+    )
+else:
+    print(
+        "Average spam confidence:", spam_confidence_total / count_spam_confidence_lines
+    )
